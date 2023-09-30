@@ -1,4 +1,4 @@
-import { Page } from "../../components";
+import { Page, Searchbar } from "../../components";
 import "./SignUp.style.scss";
 
 function SignUp() {
