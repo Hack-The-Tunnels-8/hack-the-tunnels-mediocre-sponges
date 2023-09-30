@@ -10,31 +10,33 @@ function Login() {
   const { loggedIn, login } = useAccountContext();
   const navigate = useNavigate();
 
-  const attemptLogin = async () => {
-    try {
-      const message = await login("admin@email.com", "password");
-      setMessage(message);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
     if (loggedIn() === true) {
       navigate("/");
     }
   }, [loggedIn, navigate]);
 
+  const attemptLogin = async (email, password) => {
+    try {
+      const message = await login(email, password);
+      console.log(message);
+      setMessage(message);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
   return (
     <Page>
       <div className="login-page">
         <h1>Login</h1>
         <div>
-          <input type="text" placeholder="email"></input><br></br>
-          <input type="text" placeholder="password"></input>
+          <input type="text" placeholder="email" id="email" autoFocus></input><br></br>
+          <input type="text" placeholder="password" id="password"></input>
         </div>
-        <button onClick={() => attemptLogin()}>
-          Login (as user set in code)
+        <button onClick={() => attemptLogin((document.getElementById('email')as HTMLInputElement).value, (document.getElementById('password')as HTMLInputElement).value)}>
+          Login
         </button>
         {message && <p>{message}</p>}
       </div>
