@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import { Page } from "../../components";
 import { useAccountContext } from "../../context";
 import "./Admin.style.scss";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+
+ChartJS.register(ArcElement, Tooltip, Legend);
+
 
 function Admin() {
   const { loggedIn } = useAccountContext();
