@@ -9,6 +9,7 @@ import { success, error } from "../utils";
 const router = express.Router();
 
 const signUp = async (request: Request, response: Response) => {
+  console.log("Send help")
   const result = await AccountService.create(
     request.body.email,
     request.body.password,
@@ -16,6 +17,7 @@ const signUp = async (request: Request, response: Response) => {
   );
 
   if (result.err) {
+    console.log(result.val.message)
     return error(response, {
       error: result.val.message,
       statusCode: 400,
