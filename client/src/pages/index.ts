@@ -6,3 +6,4 @@ export { Login } from "./Login";
 export { Product } from "./Product";
 export { SignUp } from "./SignUp";
 export { Error404 } from "./Error404";
+export { LoginGoogle } from "./LoginGoogle";
