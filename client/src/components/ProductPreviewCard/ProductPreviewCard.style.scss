@@ -1,14 +1,16 @@
 .product-preview-card {
   &__title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: bold;
     color: green;
   }
 
   &__description {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: blue;
   }
 
   &__image {
-    width: 10rem;
+    width: 15rem;
   }
 }
