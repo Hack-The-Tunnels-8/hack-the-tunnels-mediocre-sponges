@@ -13,6 +13,14 @@ image {
   border-radius: 50%;
 }
 
+@keyframes generate-fonts {
+  0%   {font-family: "Cursive", "Lucida Handwriting", serif;}
+  25%   {font-family: "Serif", "Garamond", serif;}
+  50%  {font-family: "Fantasy", "Papyrus", serif;}
+  75%  {font-family: "Monospace", "Monaco", serif;}
+  100% {font-family: "Sans-serif", "Helvetica", serif;}
+}
+
 button {
   padding: 12px 28px;
   border-radius: 4px;
@@ -23,5 +31,9 @@ button {
 
 button:hover {
   // make border white on hover
-  border: 2px solid white
+  border: 2px solid white;
+  animation-name: generate-fonts;
+  animation-duration: 2s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
 }
