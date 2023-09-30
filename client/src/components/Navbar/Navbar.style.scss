@@ -1,5 +1,27 @@
 .navbar {
+  position: fixed;
   display: flex;
   width: 100%;
+  top: 0;
+  background-color: lightblue;
   justify-content: space-between;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+image {
+  border-radius: 50%;
+}
+
+button {
+  padding: 12px 28px;
+  border-radius: 4px;
+  transition-duration: 0.5s;
+  font-family: "Cursive", "Lucida Handwriting", serif;
+  color: slategray;
+}
+
+button:hover {
+  // make border white on hover
+  border: 2px solid white
 }

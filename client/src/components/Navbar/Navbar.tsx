@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar__logo">
-        <Link to="/">Store Logo</Link>
+        <img src="https://i.imgur.com/3OfJvi2.png" alt="Mediocre Sponges Logo" width="50" height="50"></img>
       </div>
       <div className="navbar__account">
         {loggedIn() === false ? (
