@@ -15,3 +15,28 @@
     }
   }
 }
+
+@media (prefers-color-scheme: dark) {
+
+  .home-page {
+    background-color: black;
+    
+    &__title {
+      color: white;
+    }
+
+    &__welcome {
+      color: white
+    }
+  
+    &__products {
+      display: flex;
+      flex-direction: column;
+  
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}
